@@ -6,6 +6,11 @@ function div 3
     push constant 0
     pop local 2
 
+    push local 0
+    push constant 0
+    eq
+    if-goto end
+
     label loop
         push local 0
         push local 1
@@ -15,10 +20,6 @@ function div 3
         push local 0
         push constant 0
         lt
-        push local 0
-        push constant 0
-        eq
-        or
         if-goto end
         
         push constant 1
@@ -29,4 +30,5 @@ function div 3
         goto loop
     
     label end
+        push local 2
         return 

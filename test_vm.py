@@ -65,8 +65,6 @@ def test_mult_2():
     ram[TEMP[0]] = a
     ram[TEMP[1]] = b
     tst = {SP: STACK, TEMP[2]: a*b}
-    print(ram)
-    print(tst)
     assert vm_test("1-mult", ram, tst, 50000)
 
 
@@ -74,7 +72,9 @@ def test_mult_2():
 def test_div_0():
     ram = init_ram()
 
-    val = 0 // 5
+    ram[TEMP[0]] = 5
+    ram[TEMP[2]] = 5
+    val = 5 // 5
     tst = {SP: STACK, TEMP[1]: val}
     assert vm_test("2-div", ram, tst, 50000)
 
@@ -83,6 +83,8 @@ def test_div_0():
 def test_div_15_5():
     ram = init_ram()
 
+    ram[TEMP[0]] = 15
+    ram[TEMP[2]] = 5
     val = 15 // 5
     tst = {SP: STACK, TEMP[1]: val}
     assert vm_test("2-div", ram, tst, 50000)
