@@ -3,7 +3,9 @@
 
 function Main.main 0
 
-push temp 0
-push temp 1
-call mult 2
-pop temp 2
+    push temp 0
+    push temp 1
+    call mult 2
+    pop temp 2
+
+    

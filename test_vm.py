@@ -65,6 +65,8 @@ def test_mult_2():
     ram[TEMP[0]] = a
     ram[TEMP[1]] = b
     tst = {SP: STACK, TEMP[2]: a*b}
+    print(ram)
+    print(tst)
     assert vm_test("1-mult", ram, tst, 50000)
 
 

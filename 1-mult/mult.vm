@@ -1,2 +1,37 @@
 // implemente a funcao mult que recebe dois argumentos
 // e retorna a multiplicacao
+
+function mult 3
+    push argument 0
+    pop local 0
+    push argument 1
+    pop local 1
+    push constant 0
+    pop local 2
+
+    label loop
+        push local 0
+        push constant 0
+        eq
+        push local 1
+        push constant 0
+        eq
+        or
+        if-goto end
+
+        push local 0
+        push local 2
+        add
+        pop local 2
+
+        push local 1
+        push constant 1
+        sub
+        pop local 1
+
+        goto loop
+
+    label end
+        push local 2
+        return
+        
