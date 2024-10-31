@@ -107,7 +107,7 @@ movw (%A),%D
 incw %D
 movw %D,(%A)
 ; chamada de funcao: mult
-leaw $mult-ret-27546462,%A
+leaw $mult-ret-18237285,%A
 movw %A,%D
 leaw $SP,%A
 movw (%A),%A
@@ -166,7 +166,7 @@ movw %D,(%A)
 leaw $mult,%A
 jmp
 nop
-mult-ret-27546462:
+mult-ret-18237285:
 ;; push local 0 - 7
 leaw $0,%A
 movw %A,%D
@@ -673,7 +673,7 @@ movw (%A),%D
 incw %D
 movw %D,(%A)
 ; chamada de funcao: isqrt
-leaw $isqrt-ret-12806380,%A
+leaw $isqrt-ret-22519108,%A
 movw %A,%D
 leaw $SP,%A
 movw (%A),%A
@@ -732,7 +732,7 @@ movw %D,(%A)
 leaw $isqrt,%A
 jmp
 nop
-isqrt-ret-12806380:
+isqrt-ret-22519108:
 ;; pop temp 1 - 31
 leaw $SP,%A
 movw (%A),%D

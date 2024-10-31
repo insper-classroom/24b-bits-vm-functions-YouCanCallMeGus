@@ -438,7 +438,7 @@ movw (%A),%D
 incw %D
 movw %D,(%A)
 ; chamada de funcao: div
-leaw $div-ret-10119464,%A
+leaw $div-ret-17377910,%A
 movw %A,%D
 leaw $SP,%A
 movw (%A),%A
@@ -497,7 +497,7 @@ movw %D,(%A)
 leaw $div,%A
 jmp
 nop
-div-ret-10119464:
+div-ret-17377910:
 ;; pop temp 1 - 24
 leaw $SP,%A
 movw (%A),%D
@@ -507,3 +507,9 @@ movw (%A),%A
 movw (%A),%D
 leaw $6,%A
 movw %D,(%A)
+; Label
+Main.while:
+; Goto Incondicional
+leaw $Main.while,%A
+jmp
+nop

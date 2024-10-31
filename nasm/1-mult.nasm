@@ -439,7 +439,7 @@ movw (%A),%D
 incw %D
 movw %D,(%A)
 ; chamada de funcao: mult
-leaw $mult-ret-26788859,%A
+leaw $mult-ret-53523235,%A
 movw %A,%D
 leaw $SP,%A
 movw (%A),%A
@@ -498,7 +498,7 @@ movw %D,(%A)
 leaw $mult,%A
 jmp
 nop
-mult-ret-26788859:
+mult-ret-53523235:
 ;; pop temp 2 - 25
 leaw $SP,%A
 movw (%A),%D
