@@ -1,0 +1,5 @@
+function pow 0
+    push constant 27
+    return
+
+// testes quebrando

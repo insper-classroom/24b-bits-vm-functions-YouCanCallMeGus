@@ -22,5 +22,4 @@ function Main.main 0
     call pow 2
     pop temp 2
 
-label while
-    goto while
+
