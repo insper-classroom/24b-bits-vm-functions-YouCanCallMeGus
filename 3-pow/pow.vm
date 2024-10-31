@@ -1,5 +1,48 @@
-function pow 0
-    push constant 27
-    return
+function pow 3
 
-// testes quebrando
+    push argument 0
+    pop local 0
+    push argument 1
+    pop local 1
+
+    push local 0
+    pop local 2
+
+    push local 1
+    push constant 0
+    eq
+    if-goto pow0
+
+    push local 1
+    push constant 1
+    eq
+    if-goto result
+
+    label loop
+        push local 2
+        push local 0
+        call mult 2
+        pop local 2
+
+        push local 1
+        push constant 1
+        sub
+        pop local 1
+
+        push local 1
+        push constant 1
+        eq
+        if-goto result
+
+        goto loop
+
+    label pow0
+        push constant 1
+        goto end
+
+    label result
+        push local 2
+        goto end
+
+    label end
+        return

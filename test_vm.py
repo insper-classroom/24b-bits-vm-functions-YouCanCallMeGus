@@ -92,13 +92,13 @@ def test_div_15_5():
 
 @pytest.mark.telemetry_files(source("3-pow/pow.vm"))
 def test_pow_0():
-    ram = init_ram()
-    x = 2
-    y = 0
-    ram[TEMP[0]] = x
-    ram[TEMP[1]] = y
-    tst = {SP: STACK, TEMP[2]: x**y}
-    assert vm_test("3-pow", ram, tst, 500000)
+   ram = init_ram()
+   x = 2
+   y = 0
+   ram[TEMP[0]] = x
+   ram[TEMP[1]] = y
+   tst = {SP: STACK, TEMP[2]: x**y}
+   assert vm_test("3-pow", ram, tst, 500000)
 
 
 @pytest.mark.telemetry_files(source("3-pow/pow.vm"))
