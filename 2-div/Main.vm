@@ -27,5 +27,7 @@ push temp 2
 call div 2
 pop temp 1
 
-// Tirei o loop infinito
+label while
+    goto while
+
 
